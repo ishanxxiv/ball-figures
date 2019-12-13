@@ -1,0 +1,38 @@
+.ball-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home-container{
+    height: 100%;
+    width: 100%;
+    background-image: url(../../assets/background/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+.caption{
+    font-size: 65px;
+    text-align: center;
+    padding: 2%;
+    text-transform: uppercase;
+    color: white;
+    font-family: fantasy;
+    letter-spacing: 5px;
+}
+.action-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:10px;
+}
+.action-button button{
+    border: none;
+    background: #0202c7;
+    padding: 12px 40px;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    outline: none;
+}

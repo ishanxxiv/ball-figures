@@ -1,0 +1,9 @@
+<div class="chart-container" *ngIf="serviceData.chardData[0].data.length > 0">
+    <div>
+        <div style="display: block">
+            <canvas baseChart [datasets]="serviceData.chardData" [labels]="serviceData.chardDataHead" [options]="barChartOptions"
+                [colors]="barChartColors" [legend]="barChartLegend" [chartType]="barChartType"
+                (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+    </div>
+</div>

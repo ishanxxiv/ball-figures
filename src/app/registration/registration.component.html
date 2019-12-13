@@ -1,0 +1,188 @@
+<div class="registration-container">
+    <div class="section">
+        <div class="image-container">
+            <img src="../../assets/images/left1.jpg" alt="">
+        </div>
+        <div class="registration-form">
+            <div class="compleation-status-container">
+                <div class="caption">{{registrationTitle}}</div>
+                <div class="status-container">
+                    <div class="circle" [ngClass]="{'active-status':statusCount >= 1}">1</div>
+                    <div class="horizantal-line active-status" [ngClass]="{'active-status':statusCount >= 1}"></div>
+                    <div class="circle" [ngClass]="{'active-status':statusCount >= 2}">2</div>
+                    <div class="horizantal-line" [ngClass]="{'active-status':statusCount >= 2}"></div>
+                    <div class="circle" [ngClass]="{'active-status':statusCount >= 3}">3</div>
+                    <div class="horizantal-line" [ngClass]="{'active-status':statusCount >= 3}"></div>
+                    <div class="circle" [ngClass]="{'active-status':statusCount >= 4}">4</div>
+                </div>
+            </div>
+
+            <!-- personal information -->
+            <form action="" *ngIf="statusCount < 1">
+                <div class="info-container">
+                    <div class="info-caption">Your Name & Nickname</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="controls">
+                            <label for="nickname">Nickname</label>
+                            <input type="text" name="nickname" id="nickname">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="info-caption">Little more about you.</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="gender">Gender</label>
+                            <div class="radio-grouop">
+                                <input type="radio" name="male" id="male">
+                                <label for="gender">Male</label>
+                                <input type="radio" name="female" id="female">
+                                <label for="gender">Female</label>
+                                <input type="radio" name="other" id="other">
+                                <label for="gender">Other</label>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <label for="dob">Date of birth</label>
+                            <input type="text" name="dob" id="dob">
+                        </div>
+                        <div class="controls">
+                            <label for="mobile">mobile</label>
+                            <input type="text" name="mobile" id="mobile">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="info-caption">where do you live?</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country">
+                        </div>
+                        <div class="controls">
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state">
+                        </div>
+                        <div class="controls">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="info-caption">Login details.</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="controls">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="controls">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+            </form>
+            <!-- Your running history -->
+            <form action="" *ngIf="statusCount > 0 && statusCount < 2">
+                <div class="info-container">
+                    <div class="info-caption">Running Information</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="startdate">When did you start running</label>
+                            <input type="date" name="startdate" id="startdate">
+                        </div>
+                        <div class="controls">
+                            <label for="distance">My first running distance was.</label>
+                            <input type="text" name="distance" id="distance">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="info-caption"></div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="gender">Are you part of any running group?</label>
+                            <div class="radio-grouop">
+                                <input type="radio" name="yes" id="yes">
+                                <label for="yes">Yes</label>
+                                <input type="radio" name="no" id="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <label for="dob">Date of birth</label>
+                            <input type="text" name="dob" id="dob">
+                        </div>
+                        <div class="controls">
+                            <label for="mobile">mobile</label>
+                            <input type="text" name="mobile" id="mobile">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="info-caption">where do you live?</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country">
+                        </div>
+                        <div class="controls">
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state">
+                        </div>
+                        <div class="controls">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+                <div class="info-container">
+                    <div class="info-caption">Login details.</div>
+                    <div class="control-container">
+                        <div class="controls">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="controls">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="controls">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                    </div>
+                    <div class="horizantal-line"></div>
+                </div>
+            </form>
+            <div class="action-container">
+                <button (click)="submitRegistration()">
+                    <div class="arrow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<card></card>
+<card></card>
+<card></card>
+<card></card>
+<card></card>

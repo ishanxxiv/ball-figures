@@ -1,0 +1,17 @@
+<div class="search-container">
+  <mat-form-field class="" floatLabel="never">
+    <input class="serch-input" matInput placeholder="Search here"
+      aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete" class="gloable-auto-complete" [id]="nameId">
+      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name"
+        (click)="gotoSearchpage(state)"
+        (onSelectionChange)="gotoSearchpage(state)">
+        <div class="search-list">
+          <span class="">
+            {{changeToElip(state.name)}}
+          </span>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

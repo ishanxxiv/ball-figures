@@ -1,0 +1,93 @@
+.compare-container{
+    height: 100%;
+    width: 100%;
+    background-image: url(../../assets/background/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+.search-container{
+    display: flex;
+    justify-content: center;
+}
+.search-data-container{
+    display: flex;
+    width: 500px;
+    margin: auto;
+}
+.search-data-content{
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+.card-caption{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: large;
+    letter-spacing: 1.2px;
+}
+.card-content-body ul{
+    list-style: none;
+}
+.card-content-body ul li{
+    font-size: larger;
+}
+.card-content-body ul li .label{
+    color: #dedede;
+    margin-right: 5px;
+}
+
+.action-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:10px;
+}
+.action-button button{
+    border: none;
+    background: #0202c7;
+    padding: 8px 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+.career-container{
+    padding: 2%;
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: max-content 120px 1fr;
+}
+.career-container>div{
+    display: flex;
+    align-items: center;
+}
+
+.career-container>div>mat-select{
+    background: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+.career-container button{
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 7px 15px;
+    background: yellow;
+    margin: 5px 10px;
+    border-radius: 50px;
+}
+
+.career-button{
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 7px 15px;
+    background: rgb(12, 25, 139) !important;
+    margin: 5px 10px;
+    border-radius: 50px;
+    color: white;
+}

@@ -1,0 +1,97 @@
+.registration-container .section{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.registration-form{
+    padding: 5% 5% 0;
+}
+.image-container{
+    height: 100vh;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.compleation-status-container{
+    text-align: center;
+}
+.status-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0 4%;
+}
+.margin-top{
+    margin-top: 10px;
+}
+.status-container .circle{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid #8080806b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s;
+}
+.status-container .horizantal-line{
+    width: 80px;
+    height: 2px;
+    background: #8080806b;
+    transition: all .4s;
+}
+.active-status{
+    background: rgb(35, 122, 35)!important;
+    color: #fff;
+}
+.info-container{
+    margin-bottom: 3%;
+}
+.info-caption{
+    margin-bottom: 2%;
+}
+.info-container .control-container{
+    display: grid;
+    grid-column-gap: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.info-container .control-container input{
+    width: 100%;
+    height: 25px;
+    outline: none;
+}
+.info-container .control-container .radio-grouop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.action-container button{
+    height: 40px;
+    width: 40px;
+    background: darkblue;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 5% 0 0;
+}
+.action-container button .arrow{
+    height: 12px;
+    width: 12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(233deg);
+    margin-left: -5px;
+}

@@ -1,0 +1,46 @@
+
+<div class="compare-container">
+  <div class="career-container">
+    <div class="button-container">
+      <button [ngStyle]="{'background':isYear?'#c1c112':'#ffe500'}" (click)="switchYear(false)">Career</button>
+      <button [ngStyle]="{'background':!isYear?'#c1c112':'#ffe500'}" (click)="switchYear(true)">Year</button>
+    </div>
+    <div class="year-dropdown" *ngIf="isYear">
+      <mat-select (selectionChange)="selectedYear($event.value)">
+        <mat-option *ngFor="let year of years()" [value]="year">{{year}}</mat-option>
+      </mat-select>
+    </div>
+    <div *ngIf="!isYear"></div>
+    <div style="display: flex; justify-content: flex-end;">
+      <button class="career-button" (click)="back()">back</button>
+    </div>
+  </div>
+  <div class="search-container">
+    <search [nameId]="first"></search>
+    <search [nameId]="sec"></search>
+  </div>
+  <div class="search-data-container">
+    <div class="search-data-content" *ngIf="dataserv.compare['first']['data']">
+        <div class="card-caption">{{dataserv.compare['first']['name']}}</div>
+        <div class="card-content-body">
+          <ul>
+            <li *ngFor="let sele of dataserv.compare['first']['data'] | keys"><span class="label">{{sele.key}}</span><span class="item">{{sele.value}}</span></li>
+          </ul>
+        </div>
+    </div>
+    <div class="search-data-content" *ngIf="dataserv.compare['sec']['data']">
+        <div class="card-caption">{{dataserv.compare['sec']['name']}}</div>
+        <div class="card-content-body">
+          <ul >
+            <li *ngFor="let sele of dataserv.compare['sec']['data'] | keys"><span class="label">{{sele.key}}</span><span class="item">{{sele.value}}</span></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="action-button">
+    <button (click)="compareChart()">Compare</button>
+  </div>
+  <div class="chart-compare">
+    <bar-chart></bar-chart>
+  </div>
+</div>
