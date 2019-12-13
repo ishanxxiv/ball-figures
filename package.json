@@ -12,8 +12,7 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run myracepro-ng:server:production",
-     "postinstall": "ng build --aot --prod"
-
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
